@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Ayesha!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Pacifico', cursive;
+      background: linear-gradient(to top left, #ffb6c1, #fff0f5);
+      overflow-x: hidden;
+    }
+    h1 {
+      text-align: center;
+      color: #ff1493;
+      font-size: 3em;
+      margin-top: 20px;
+      animation: bounce 2s infinite;
+    }
+    .gallery {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
+      gap: 20px;
+    }
+    .gallery img {
+      width: 250px;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .cartoon {
+      position: absolute;
+      width: 80px;
+      animation: fly 8s linear infinite;
+    }
+    .cartoon:nth-child(1) { top: 10%; left: -100px; animation-delay: 0s; }
+    .cartoon:nth-child(2) { top: 30%; left: -120px; animation-delay: 2s; }
+    .cartoon:nth-child(3) { top: 50%; left: -140px; animation-delay: 4s; }
+
+    @keyframes fly {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(150vw); }
+    }
+
+    .side-cartoon {
+      position: fixed;
+      bottom: 3px;
+      width: 200px;
+      z-index: 2;
+    }
+    .left {
+      left: 10px;
+      animation: wave 4s ease-in-out infinite;
+    }
+    .right {
+      right: 10px;
+      animation: wave 4s ease-in-out infinite reverse;
+    }
+
+    @keyframes wave {
+      0% { transform: rotate(0deg); }
+      50% { transform: rotate(5deg); }
+      100% { transform: rotate(0deg); }
+    }
+
+    .confetti {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      background-color: gold;
+      top: 0;
+      animation: fall 5s linear infinite;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(100vh); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎂 Happy Birthday Ayesha 🎉</h1>
+
+  <div class="gallery">
+    <img src="ayesha1.jpeg" alt="Ayesha 1" />
+    <img src="ayesha2.jpeg" alt="Ayesha 2" />
+    <img src="ayesha3.jpeg" alt="Ayesha 3" />
+  </div>
+
+  <!-- Cartoon animations flying -->
+  <img class="cartoon" src="https://pngimg.com/uploads/spongebob/spongebob_PNG25.png" alt="cartoon" />
+  <img class="cartoon" src="https://pngimg.com/uploads/mickey_mouse/mickey_mouse_PNG36.png" alt="cartoon" />
+  <img class="cartoon" src="https://pngimg.com/uploads/minions/minions_PNG21.png" alt="cartoon" />
+
+  <!-- Fixed side cartoons -->
+  <img class="side-cartoon left" src="doree.png" alt="Doremon" />
+  <img class="side-cartoon right" src="dor.png" alt="Motu Patlu" />
+
+  <!-- Confetti animations -->
+  <div class="confetti" style="left: 10%; animation-delay: 0s;"></div>
+  <div class="confetti" style="left: 30%; animation-delay: 1s;"></div>
+  <div class="confetti" style="left: 50%; animation-delay: 2s;"></div>
+  <div class="confetti" style="left: 70%; animation-delay: 3s;"></div>
+  <div class="confetti" style="left: 90%; animation-delay: 4s;"></div>
+
+  <!-- Background music -->
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/16/audio_7efb3c14f0.mp3?filename=happy-birthday-112195.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+</body>
+</html>
